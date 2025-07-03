@@ -30,7 +30,7 @@ jobs:
         goarch: [ amd64 ]
       fail-fast: false
 
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     env:
       GOOS: ${{ matrix.goos }}
       GOARCH: ${{ matrix.goarch }}
