@@ -59,7 +59,7 @@ jobs:
       - name: Build XrayR
         run: |
           mkdir -p build_assets
-          go build -v -o build_assets/XrayR -trimpath -ldflags "-s -w -buildid="
+          GOAMD64=v4 CGO_ENABLED=0 go build -v -o build_assets/XrayR -trimpath -ldflags "-s -w -buildid="
 
       - name: Prepare to release
         uses: nick-fields/retry@v2
